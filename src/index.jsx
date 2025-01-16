@@ -32,15 +32,6 @@ import './index.scss';
  * (so we don't need to get it separately from process.env).
  * After we add the keys to frontend-platform, this mergeConfig can go away
  */
-mergeConfig({
-  COMMERCE_COORDINATOR_BASE_URL: process.env.COMMERCE_COORDINATOR_BASE_URL,
-  ENABLE_B2C_SUBSCRIPTIONS: process.env.ENABLE_B2C_SUBSCRIPTIONS,
-  SUBSCRIPTIONS_BASE_URL: process.env.SUBSCRIPTIONS_BASE_URL,
-  SUBSCRIPTIONS_MARKETING_URL: process.env.SUBSCRIPTIONS_MARKETING_URL,
-  SUBSCRIPTIONS_MINIMUM_PRICE: process.env.SUBSCRIPTIONS_MINIMUM_PRICE,
-  SUBSCRIPTIONS_TRIAL_LENGTH: process.env.SUBSCRIPTIONS_TRIAL_LENGTH,
-  SUPPORT_URL: process.env.SUPPORT_URL,
-});
 
 subscribe(APP_READY, () => {
   if (process.env.NODE_ENV === 'development') {
@@ -82,4 +73,17 @@ initialize({
   messages,
   requireAuthenticatedUser: true,
   hydrateAuthenticatedUser: true,
+  handlers: {
+    config: () => {
+      mergeConfig({
+        COMMERCE_COORDINATOR_BASE_URL: process.env.COMMERCE_COORDINATOR_BASE_URL,
+        ENABLE_B2C_SUBSCRIPTIONS: process.env.ENABLE_B2C_SUBSCRIPTIONS,
+        SUBSCRIPTIONS_BASE_URL: process.env.SUBSCRIPTIONS_BASE_URL,
+        SUBSCRIPTIONS_MARKETING_URL: process.env.SUBSCRIPTIONS_MARKETING_URL,
+        SUBSCRIPTIONS_MINIMUM_PRICE: process.env.SUBSCRIPTIONS_MINIMUM_PRICE,
+        SUBSCRIPTIONS_TRIAL_LENGTH: process.env.SUBSCRIPTIONS_TRIAL_LENGTH,
+        SUPPORT_URL: process.env.SUPPORT_URL,
+      }, 'App loadConfig ecommerce override handler');
+    },
+  },
 });
