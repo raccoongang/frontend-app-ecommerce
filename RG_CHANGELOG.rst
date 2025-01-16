@@ -10,5 +10,8 @@ The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`
 
 Fixed
 =====
+* Ignored runtime config [RGInt-353]
+  * Fixed order history services getOrders
+
 * Initial redwood-rg implementation based on upstream's open-release/redwood.master [DR-182]
   * Update dependencies to add compatibility with RG footer/header/brand
