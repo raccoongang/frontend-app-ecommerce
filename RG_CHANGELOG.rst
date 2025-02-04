@@ -11,5 +11,6 @@ and this project adheres to customized Semantic Versioning e.g.: `teak-rg.1`
 
 Fixed:
 ======
+* Remove "edX" from page title
 * Ignored runtime config: fixed order history services getOrders (RGInt-353)
 * Fix DataTable cells vertical alignment (RGOeX-26438)
