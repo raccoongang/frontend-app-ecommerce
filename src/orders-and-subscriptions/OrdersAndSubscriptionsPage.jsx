@@ -44,7 +44,7 @@ const OrdersAndSubscriptionsPage = () => {
       dispatch(fetchSubscriptions());
     }
     if (!isSubscriptionDisabled && hasSubscriptions) {
-      document.title = 'Orders and Subscriptions | edX';
+      document.title = 'Orders and Subscriptions';
       sendTrackEvent('edx.bi.user.subscription.order-page.viewed');
     }
     // TODO: We should fetch based on the route (ex: /orders/?orderPage=1)
