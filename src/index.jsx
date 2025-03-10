@@ -18,12 +18,11 @@ import Footer from '@edx/frontend-component-footer';
 
 import messages from './i18n';
 import configureStore from './store';
-import { NotFoundPage } from './components';
+import { NotFoundPage, Head } from './components';
 import { OrdersAndSubscriptionsPage } from './orders-and-subscriptions';
 import { ManageSubscriptionsPage } from './subscriptions';
 
 import './index.scss';
-
 /**
  * TEMPORARY
  *
@@ -40,6 +39,7 @@ subscribe(APP_READY, () => {
 
   ReactDOM.render(
     <AppProvider store={configureStore()}>
+      <Head />
       <Header />
       <main>
         <Routes>

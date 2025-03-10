@@ -9,6 +9,10 @@ and this project adheres to customized Semantic Versioning e.g.: `teak-rg.1`
 [Unreleased]
 ************
 
+Added:
+======
+* Implemented head component for SEO title and favicon
+
 Fixed:
 ======
 * Remove "edX" from page title
