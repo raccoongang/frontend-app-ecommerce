@@ -10,7 +10,7 @@ describe('Head', () => {
   it('should match render title tag and fivicon with the site configuration values', () => {
     render(<IntlProvider locale="en"><Head {...props} /></IntlProvider>);
     const helmet = Helmet.peek();
-    expect(helmet.title).toEqual(`Account | ${getConfig().SITE_NAME}`);
+    expect(helmet.title).toEqual(`Order History | ${getConfig().SITE_NAME}`);
     expect(helmet.linkTags[0].rel).toEqual('shortcut icon');
     expect(helmet.linkTags[0].href).toEqual(getConfig().FAVICON_URL);
   });
