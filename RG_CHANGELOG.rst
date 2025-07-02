@@ -11,6 +11,7 @@ and this project adheres to customized Semantic Versioning e.g.: `teak-rg.1`
 
 Added:
 ======
+* Upgrade frontend-app-ecommerce for Design Tokens (TEA-109)
 * Implemented head component for SEO title and favicon
 
 Fixed:
