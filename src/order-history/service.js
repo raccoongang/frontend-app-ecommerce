@@ -6,13 +6,13 @@ export async function getOrders(page = 1, pageSize = 20) {
   const httpClient = getAuthenticatedHttpClient();
   const { username } = getAuthenticatedUser();
 
-  const { ORDER_HISTORY_URL, RECEIPT_URL, ECOMMERCE_BASE_URL } = getConfig();
+  const { ORDER_HISTORY_API_URL, RECEIPT_URL, ECOMMERCE_BASE_URL } = getConfig();
 
   const ECOMMERCE_API_BASE_URL = `${ECOMMERCE_BASE_URL}/api/v2`;
   const ECOMMERCE_RECEIPT_BASE_URL = RECEIPT_URL || `${ECOMMERCE_BASE_URL}/checkout/receipt/`;
-  const ECOMMERCE_ORDERS_URL = ORDER_HISTORY_URL || `${ECOMMERCE_API_BASE_URL}/orders/`;
+  const ECOMMERCE_ORDERS_API_URL = ORDER_HISTORY_API_URL || `${ECOMMERCE_API_BASE_URL}/orders/`;
 
-  const { data } = await httpClient.get(`${ECOMMERCE_ORDERS_URL}`, {
+  const { data } = await httpClient.get(`${ECOMMERCE_ORDERS_API_URL}`, {
     params: {
       username,
       page,
