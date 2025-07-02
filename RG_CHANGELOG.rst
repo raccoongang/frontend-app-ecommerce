@@ -15,6 +15,7 @@ Added:
 
 Fixed:
 ======
+* Get correct value for ECOMMERCE_ORDERS_API_URL from config
 * Remove "edX" from page title
 * Ignored runtime config: fixed order history services getOrders (RGInt-353)
 * Fix DataTable cells vertical alignment (RGOeX-26438)
