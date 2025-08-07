@@ -9,6 +9,9 @@ and this project adheres to customized Semantic Versioning e.g.: `teak-rg.1`
 [Unreleased]
 ************
 
+[release/teak-rg.1] - 2025-08-06
+********************************
+
 Added:
 ======
 * Upgrade frontend-app-ecommerce for Design Tokens (TEA-109)
