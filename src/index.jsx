@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 import React from 'react';
-import ReactDOM from 'react-dom';
+// eslint-disable-next-line import/no-unresolved
+import { createRoot } from 'react-dom/client';
 import { Route, Routes } from 'react-router-dom';
 import { IntlProvider } from '@edx/frontend-platform/i18n';
 import { AppProvider, ErrorPage } from '@edx/frontend-platform/react';
@@ -32,12 +33,14 @@ import './index.scss';
  * After we add the keys to frontend-platform, this mergeConfig can go away
  */
 
+const root = createRoot(document.getElementById('root'));
+
 subscribe(APP_READY, () => {
   if (process.env.NODE_ENV === 'development') {
     global.analytics?.debug();
   }
 
-  ReactDOM.render(
+  root.render(
     <AppProvider store={configureStore()}>
       <Head />
       <Header />
@@ -56,16 +59,14 @@ subscribe(APP_READY, () => {
       </main>
       <Footer />
     </AppProvider>,
-    document.getElementById('root'),
   );
 });
 
 subscribe(APP_INIT_ERROR, (error) => {
-  ReactDOM.render(
+  root.render(
     <IntlProvider locale="en">
       <ErrorPage message={error.message} />
     </IntlProvider>,
-    document.getElementById('root'),
   );
 });
 
