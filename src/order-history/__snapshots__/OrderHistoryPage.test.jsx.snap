@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`<OrderHistoryPage /> Renders correctly in various states renders empty orders 1`] = `
 <section
@@ -72,31 +72,104 @@ exports[`<OrderHistoryPage /> Renders correctly in various states renders orders
         >
           <button
             aria-label="Previous, Page 1"
-            class="previous page-link btn btn-primary"
+            class="previous page-link btn btn-tertiary"
             type="button"
           >
-            <div>
-              <span
-                class="pgn__icon"
+            <span
+              class="pgn__icon btn-icon-before"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                focusable="false"
+                height="24"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  aria-hidden="true"
-                  fill="none"
-                  focusable="false"
-                  height="24"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-              Previous
-            </div>
+                <path
+                  d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            Previous
+          </button>
+        </li>
+        <li
+          class="page-item"
+        >
+          <button
+            aria-label="Page 1"
+            class="page-link btn btn-tertiary"
+            type="button"
+          >
+            1
+          </button>
+        </li>
+        <li
+          class="page-item active"
+        >
+          <button
+            aria-label="Page 2, Current Page"
+            class="page-link btn btn-primary"
+            type="button"
+          >
+            2
+          </button>
+        </li>
+        <li
+          class="page-item"
+        >
+          <button
+            aria-label="Page 3"
+            class="page-link btn btn-tertiary"
+            type="button"
+          >
+            3
+          </button>
+        </li>
+        <li
+          class="page-item"
+        >
+          <button
+            aria-label="Page 4"
+            class="page-link btn btn-tertiary"
+            type="button"
+          >
+            4
+          </button>
+        </li>
+        <li
+          class="page-item"
+        >
+          <button
+            aria-label="Page 5"
+            class="page-link btn btn-tertiary"
+            type="button"
+          >
+            5
+          </button>
+        </li>
+        <li
+          class="page-item disabled"
+        >
+          <span
+            class="btn page-link ellipsis"
+          >
+            ...
+          </span>
+        </li>
+        <li
+          class="page-item"
+        >
+          <button
+            aria-label="Page 10"
+            class="page-link btn btn-tertiary"
+            type="button"
+          >
+            10
           </button>
         </li>
         <li
@@ -104,31 +177,29 @@ exports[`<OrderHistoryPage /> Renders correctly in various states renders orders
         >
           <button
             aria-label="Next, Page 3"
-            class="next page-link btn btn-primary"
+            class="previous page-link btn btn-tertiary"
             type="button"
           >
-            <div>
-              Next
-              <span
-                class="pgn__icon"
+            Next
+            <span
+              class="pgn__icon btn-icon-after"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                focusable="false"
+                height="24"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  aria-hidden="true"
-                  fill="none"
-                  focusable="false"
-                  height="24"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-            </div>
+                <path
+                  d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
           </button>
         </li>
       </ul>
